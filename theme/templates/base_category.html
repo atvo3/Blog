@@ -20,15 +20,33 @@
         <div style="height:100%;" class="row">
             <div class="col-4">
                 <nav>
-                    <ul class="nav flex-column">
+                    <ul class="nav flex-column sidebar-items">
                         <li class="nav-item">
-                            <a href="#">Blog</a>
+                            <a href="{{ SITEURL }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#">Projects</a>
+                            <a href="{{ SITEURL }}/category/blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ SITEURL }}/category/projects">Projects</a>
                         </li>
                         <li class="nav-item">
                             <a href="#">Archives</a>
+                        </li>
+                    </ul>
+                    <hr class="solid">
+                    <ul class="nav flex-column sidebar-items">
+                        <li class="nav-item">
+                            <a href="#">Twitter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Facebook</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Github</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Gitlab</a>
                         </li>
                     </ul>
                 </nav>
@@ -36,6 +54,11 @@
             <div class="col-8">
                 <div class="container">
                     {% block content %}{% endblock %}
+                    <div class="fixed-bottom">
+                        <footer>
+                            © An Vo
+                        </footer>
+                    </div>
                 </div>
             </div>
         </div>

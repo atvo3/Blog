@@ -15,3 +15,11 @@ html,  body {
     width: 18rem;
     height: 10rem;
 }
+
+hr.solid {
+    border-top: 2px solid #999;
+}
+
+.sidebar-items {
+    margin-left: 10%;
+}
