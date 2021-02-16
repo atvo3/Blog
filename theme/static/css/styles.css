@@ -23,3 +23,15 @@ hr.solid {
 .sidebar-items {
     margin-left: 10%;
 }
+
+.sidebar-label {
+    margin-left: 0.7em;
+}
+
+i.sidebar-icon {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
