@@ -15,11 +15,11 @@
 
 <body class="d-flex flex-column min-vh-100">
     <div class="container-fluid">
-        <div class="row">
+        <div style="height: 10%;" class="row">
             <h3>{{ category }}</h3>
         </div>
-        <div style="height:100%;" class="row">
-            <div class="col-4">
+        <div style="height:85%;" class="row">
+            <div class="col-4 sidebar">
                 <nav>
                     <ul class="nav flex-column sidebar-items">
                         <li class="nav-item">
@@ -83,9 +83,25 @@
                 </nav>
             </div>
             <div class="col-8">
-                <div class="container">
-                    {% block content %}{% endblock %}
-                    <div class="fixed-bottom">
+                <div class="container" style="display: flex; flex-direction: column;">
+                    <div class="row">
+                        {% block content %}{% endblock %}
+                    </div>
+                    <div class="row" style="margin-top: auto;">
+                        <div class="row">
+                            <div class="col">
+                                {% if articles_page.has_next() %}
+                                <a href="{{ SITEURL }}/{{ articles_next_page.url }}">Last Page</a>
+                                {% endif %}
+                            </div>
+                            <div class="col">
+                                {% if articles_page.has_previous() %}
+                                <a href="{{ SITEURL }}/{{ articles_previous_page.url }}">Next Page</a>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="row">
                         <footer>
                             © An Vo
                         </footer>
@@ -93,6 +109,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
     </div>
 </body>

@@ -1,35 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="row">
-        <p>{{ SITENAME }}</p>
-    </div>
-    <div class="row">
-        <p>Hello! I'm Anvinski and here's where you can keep up-to-date with my latest thoughts on topics that interest me.
-        </p>
-    </div>
-    <div class="row g-2">
-        <span>
-            <h1 class="display-6">Journal</h1>
-        </span>
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <a href="{{ SITEURL }}/category/blog">
-                        <h5 class="card-title">Blog</h5>
-                    </a>
-                    <p class="card-text">I write miscellaneous stuff here. It could be about software development, movies,
-                        video games, or chocobos</p>
-                </div>
+<div class="row">
+    <p>{{ SITENAME }}</p>
+</div>
+<div class="row">
+    <p>Hello! I'm Anvinski and here's where you can keep up-to-date with my latest thoughts on topics that interest me.
+    </p>
+</div>
+<div class="row g-2">
+    <span>
+        <h1 class="display-6">Journal</h1>
+    </span>
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <a href="{{ SITEURL }}/category/blog">
+                    <h5 class="card-title">Blog</h5>
+                </a>
+                <p class="card-text">I write miscellaneous stuff here. It could be about software development, movies,
+                    video games, or chocobos</p>
             </div>
         </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <a href="{{ SITEURL }}/category/projects">
                     <h5 class="card-title">Projects</h5>
-                    <p class="card-text">Take a look behind the scenes of projects that I've worked on</p>
-                </div>
+                </a>
+                <p class="card-text">Take a look behind the scenes of projects that I've worked on</p>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}

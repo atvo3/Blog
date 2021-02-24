@@ -10,9 +10,6 @@
                     </a>
                 </h1>
                 <p> Published: {{ article.locale_date }}</p>
-                {% if article.modified %}
-                <p> Updated: {{ article.locale_modified }}</p>
-                {% endif %}
             </header>
 
             {% if article.summary %}
@@ -20,6 +17,9 @@
                 {{ article.summary | safe | truncate(150)}}
             </div>
             {% endif %}
+            <div>
+                <hr class="solid"/>
+            </div>
         </article>
     {% endfor %}
 {% endblock %}
