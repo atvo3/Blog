@@ -19,7 +19,7 @@ article {
     height: 100%;
 }
 
-.card {
+.home-card {
     width: 18rem;
     height: 10rem;
 }
@@ -42,4 +42,8 @@ hr.solid {
 
 i.sidebar-icon {
     font-size: 1rem;
+}
+
+.h-10 {
+    height: 10% !important;
 }

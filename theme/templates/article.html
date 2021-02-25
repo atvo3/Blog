@@ -2,12 +2,58 @@
 
 {% block title %}{{ article.title }}{% endblock %}
 
+{% block header %}
+<nav class="navbar sticky-top navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="row w-100">
+            <div class="col-4 col-md-2">
+                <a class="navbar-brand" href="{{ SITEURL }}/index.html">{{ SITENAME }}</a>
+            </div>
+            <div class="col-8" style="padding-top: .2600em;">
+                <ul class="navbar-nav nav flex-row">
+                    <div class="col-3 col-md-2">
+                        <li class="nav-item">
+                            <a href="{{ SITEURL }}/category/blog">Blog</a>
+                        </li>
+                    </div>
+                    <div class="col-5 col-md-2">
+                        <li class="nav-item">
+                            <a href="{{ SITEURL }}/category/projects">Projects</a>
+                        </li>
+                    </div>
+                    <div class="col-3 col-md-2">
+                        <li class="nav-item">
+                            <a href="#">Archives</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
 {% block content %}
-<div class="row">
- <div class="col-md-8">
-  <h1>{{ article.title }}</h1>
-  <label>Posted on <strong>{{ article.date }}</strong></label>
-  {{ article.content }}
- </div>
+<div class="row h-100 mt-5">
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-header text-center">
+                {{ article.title }}
+            </div>
+            <div class="card-body">
+                <p class="card-text"> {{ article.content }}</p>
+            </div>
+            <div class="card-footer text-muted">
+                {{ article.locale_date }}
+            </div>
+        </div>
+    </div>
+    <div class="row mt-auto">
+        <div class="col">
+            <footer>
+                © An Vo
+            </footer>
+        </div>
+    </div>
 </div>
 {% endblock %}

@@ -83,11 +83,11 @@
                 </nav>
             </div>
             <div class="col-8">
-                <div class="container" style="display: flex; flex-direction: column;">
-                    <div class="row">
+                <div class="container">
+                    <div class="row h-100">
                         {% block content %}{% endblock %}
                     </div>
-                    <div class="row" style="margin-top: auto;">
+                    <div class="row">
                         <div class="row">
                             <div class="col">
                                 {% if articles_page.has_next() %}
