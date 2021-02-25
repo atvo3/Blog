@@ -1,3 +1,4 @@
+{% import "macros.html" as macros %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -101,11 +102,7 @@
                         </div>
                         {% endif %}
                     </div>
-                    <div class="row">
-                        <footer>
-                            © An Vo
-                        </footer>
-                    </div>
+                    {{ macros.add_footer() }}
                 </div>
             </div>
         </div>
