@@ -11,14 +11,6 @@ article {
     padding: 2.5%;
 }
 
-.container-fluid {
-    height: 100%;
-}
-
-.container {
-    height: 100%;
-}
-
 .home-card {
     width: 18rem;
     height: 10rem;
