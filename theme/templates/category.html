@@ -1,4 +1,8 @@
-{% extends "base_category.html" %}
+{% extends "base_sidebar.html" %}
+
+{% block header %}
+{{ category }}
+{% endblock %}
 
 {% block content %}
 {% for article in articles_page.object_list %}
@@ -22,4 +26,22 @@
     </div>
 </article>
 {% endfor %}
+{% endblock %}
+
+{% block footer %}
+<div class="row">
+    <div class="row">
+        <div class="col">
+            {% if articles_page.has_next() %}
+            <a href="{{ SITEURL }}/{{ articles_next_page.url }}">Last Page</a>
+            {% endif %}
+        </div>
+        <div class="col">
+            {% if articles_page.has_previous() %}
+            <a href="{{ SITEURL }}/{{ articles_previous_page.url }}">Next Page</a>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{{ macros.add_footer() }}
 {% endblock %}

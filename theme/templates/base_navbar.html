@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block header %}
+<nav class="navbar sticky-top navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="row w-100">
+            <div class="col-4 col-md-2">
+                <a class="navbar-brand" href="{{ SITEURL }}/index.html">{{ SITENAME }}</a>
+            </div>
+            <div class="col-8" style="padding-top: .2600em;">
+                <ul class="navbar-nav nav flex-row">
+                    <div class="col-3 col-md-2">
+                        <li class="nav-item">
+                            <a href="{{ SITEURL }}/category/blog">Blog</a>
+                        </li>
+                    </div>
+                    <div class="col-5 col-md-2">
+                        <li class="nav-item">
+                            <a href="{{ SITEURL }}/category/projects">Projects</a>
+                        </li>
+                    </div>
+                    <div class="col-3 col-md-2">
+                        <li class="nav-item">
+                            <a href="#">Archives</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+{% endblock %}

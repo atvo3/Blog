@@ -17,7 +17,7 @@
 <body class="d-flex flex-column min-vh-100">
     <div class="container-fluid h-100">
         <div class="row h-10">
-            <h3>{{ category }}</h3>
+            <h3>{% block header %}{% endblock %}</h3>
         </div>
         <div class="row">
             <div class="col-4 sidebar">
@@ -88,21 +88,7 @@
                     <div class="row h-100">
                         {% block content %}{% endblock %}
                     </div>
-                    <div class="row">
-                        <div class="row">
-                            <div class="col">
-                                {% if articles_page.has_next() %}
-                                <a href="{{ SITEURL }}/{{ articles_next_page.url }}">Last Page</a>
-                                {% endif %}
-                            </div>
-                            <div class="col">
-                                {% if articles_page.has_previous() %}
-                                <a href="{{ SITEURL }}/{{ articles_previous_page.url }}">Next Page</a>
-                            </div>
-                        </div>
-                        {% endif %}
-                    </div>
-                    {{ macros.add_footer() }}
+                    {% block footer %}{% endblock %}
                 </div>
             </div>
         </div>
