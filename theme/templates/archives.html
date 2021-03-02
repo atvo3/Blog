@@ -1,0 +1,33 @@
+{% extends "base_navbar.html" %}
+{% import "macros.html" as macros %}
+
+{% block title %}Archives{% endblock %}
+
+
+{% block content %}
+<h3>Archives</h3>
+
+{% for article in articles %}
+
+{% if loop.index0 == 0 or articles[loop.index0 - 1].date.year != article.date.year %}
+{% if loop.index0 > 0 %}
+{% endif %}
+<table class="table table-hover table-striped caption-top">
+<caption><h3>{{ article.date.year }}</h3></caption>
+<thead>
+    <tr>
+        <th>Title</th>
+        <th>Date</th>
+    </tr>
+</thead>
+<tbody>
+{% endif %}
+<tr>
+    <td><a href="{{ SITEURL }}/{{ article.url }}"> {{ article.title }}</a></td>
+    <td>{{ article.date | strftime("%b %d") }}</td>
+</tr>
+
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
