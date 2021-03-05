@@ -3,14 +3,14 @@
 
 {% block content %}
 <div class="row h-100">
-    <div class="col">
-        <div class="row">
-            <p>{{ SITENAME }}</p>
+    <div class="col h-100">
+        <div class="row h-10">
+            <div class="col">
+                <img src="/theme/images/index-anvinski.png" class="img-fluid h-100">
+            </div>
         </div>
         <div class="row">
-            <p>Hello! I'm Anvinski and here's where you can keep up-to-date with my latest thoughts on topics that interest
-                me.
-            </p>
+            <p>Hello! I'm Anvinski and here's where you can keep up with my latest thoughts on topics that interest me.</p>
         </div>
         <div class="row g-2">
             <span>
@@ -22,9 +22,7 @@
                         <a href="{{ SITEURL }}/category/blog">
                             <h5 class="card-title">Blog</h5>
                         </a>
-                        <p class="card-text">I write miscellaneous stuff here. It could be about software development,
-                            movies,
-                            video games, or chocobos</p>
+                        <p class="card-text">I write miscellaneous stuff here. It could be about software development, movies, video games, or chocobos</p>
                     </div>
                 </div>
             </div>
@@ -38,8 +36,40 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row mt-5">
+            <h1 class="display-6">Socials</h1>
+            <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group me-4" role="group">
+                    <button type="button" class="btn btn-outline-secondary">
+                        <a href="#">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                    </button>
+                </div>
+                <div class="btn-group me-4" role="group">
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="bi bi-facebook"></i>
+                    </button>
+                </div>
+                <div class="btn-group me-4" role="group">
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="bi bi-github"></i>
+                    </button>
+                </div>
+                <div class="btn-group me-4" role="group">
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="bi bi-linkedin"></i>
+                    </button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="bi bi-instagram"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-{{ macros.add_footer() }}
+    {{ macros.add_footer() }}
 </div>
 {% endblock %}
