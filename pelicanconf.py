@@ -30,31 +30,31 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 10
 
+DELETE_OUTPUT_DIRECTORY = True
 
+PAGINATED_DIRECT_TEMPLATES = []
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# URL schemas
+ARCHIVES_URL = 'archives/'
+ARCHIVES_SAVE_AS = 'archives.html'
 
-# URL schema
-# ARCHIVES_URL = 'all/archives/'
-# ARCHIVES_SAVE_AS = 'all/archives/index.html'
-# ARTICLE_URL = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-# ARTICLE_SAVE_AS = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
-# AUTHOR_SAVE_AS = False
-# AUTHORS_SAVE_AS = False
-# CATEGORIES_URL = 'all/categories/'
-# CATEGORIES_SAVE_AS = 'all/categories/index.html'
+ARTICLE_URL = 'articles/{slug}.html'
+ARTICLE_SAVE_AS = 'articles/{slug}.html'
+
+AUTHOR_SAVE_AS = False
+AUTHORS_SAVE_AS = False
+
+CATEGORIES_URL = 'categories/'
+CATEGORIES_SAVE_AS = 'categories.html'
+
 CATEGORY_URL = 'category/{slug}.html'
 CATEGORY_SAVE_AS = 'category/{slug}.html'
   
-# INDEX_SAVE_AS = 'all/index.html'
-# INDEX_URL = 'all/'
-# PAGE_URL = '{fullpath}/'
-# PAGE_SAVE_AS = '{fullpath}/index.html'
-# TAG_URL = 'all/tags/{slug}/'
-# TAG_SAVE_AS = 'all/tags/{slug}/index.html'
-# TAGS_URL = 'all/tags/'
-# TAGS_SAVE_AS = 'all/tags/index.html'
+PAGE_URL = 'pages/{slug}.html'
+PAGE_SAVE_AS = 'pages/{slug}.html'
 
-# Filename metadata parsing
-# FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
+TAGS_URL = 'tags/'
+TAGS_SAVE_AS = 'tags.html'
+
+TAG_URL = 'tag/{slug}.html'
+TAG_SAVE_AS = 'tag/{slug}.html'
