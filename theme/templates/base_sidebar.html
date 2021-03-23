@@ -18,7 +18,7 @@
     <div class="container-fluid h-100">
         <div class="row h-10">
             <div class="d-flex justify-content-center">
-                <h1>{% block header %}{% endblock %}</h1>
+                <h1 style="padding: 6%;">{% block header %}{% endblock %}</h1>
             </div>
         </div>
         <div class="row h-100">
@@ -87,7 +87,7 @@
                     <div class="container">
                         <ul class="nav flex-column sidebar-items">
                             <li class="nav-item">
-                                <h1><a href="{{ SITEURL }}/{{ TAGS_URL }}">Tags</a></h1>
+                                <h2>Tags</h2>
                             </li>
                             {% for tag, articles in tags | sort %}
                             {% if articles | length > 1 %}
@@ -101,7 +101,7 @@
                 </nav>
             </div>
             <div class="col-8">
-                <div class="container h-100">
+                <div class="container h-100 content">
                     <div class="row">
                         {% block content %}{% endblock %}
                     </div>
