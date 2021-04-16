@@ -38,8 +38,8 @@ PAGINATED_DIRECT_TEMPLATES = []
 ARCHIVES_URL = 'archives/'
 ARCHIVES_SAVE_AS = 'archives.html'
 
-ARTICLE_URL = 'articles/{slug}.html'
-ARTICLE_SAVE_AS = 'articles/{slug}.html'
+ARTICLE_URL = 'articles/{category}/{date:%m}/{date:%d}/{date:%Y}/{slug}.html'
+ARTICLE_SAVE_AS = 'articles/{category}/{date:%m}/{date:%d}/{date:%Y}/{slug}.html'
 
 AUTHOR_SAVE_AS = False
 AUTHORS_SAVE_AS = False
