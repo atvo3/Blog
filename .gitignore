@@ -2,5 +2,3 @@
 .sw*
 .*.sw*
 __pycache__/
-
-/output/
