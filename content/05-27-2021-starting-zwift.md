@@ -1,7 +1,7 @@
 title: Starting Zwift
 date: 2021-05-27
 category: Blog
-tags: zwift
+tags: Zwift
 
 I finally got inspired to do indoor bike riding with Zwift after watching some fitness youtubers.  
 Elliptical had been my primary choice of cardio that I've been able to do at least 150 minutes a week for at least half a year now.
